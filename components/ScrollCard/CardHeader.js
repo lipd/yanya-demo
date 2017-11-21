@@ -1,14 +1,15 @@
 import React, { Component } from 'react'
 import { Text, View, ScrollView, StyleSheet } from 'react-native'
-import { gray } from "../../utils/colors";
+import { gray } from '../../utils/colors'
 
 class CardHeader extends Component {
   render() {
+    const { num, title } = this.props
     return (
       <View style={styles.container}>
-        <Text style={styles.title}>今日推荐</Text>
+        <Text style={styles.title}>{title}</Text>
         <View style={styles.detail}>
-          <Text style={styles.detailText}>全部3 ></Text>
+          <Text style={styles.detailText}>全部{num} ></Text>
         </View>
       </View>
     )
@@ -23,10 +24,10 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 16,
-    flex: 4,
+    flex: 4
   },
   detail: {
-    flex: 1,
+    flex: 1
   },
   detailText: {
     color: gray

@@ -1,5 +1,5 @@
 import React from 'react'
-import { StyleSheet, Text, View, StatusBar } from 'react-native'
+import { StyleSheet, Text, View, StatusBar, ScrollView } from 'react-native'
 import { TabNavigator, StackNavigator } from 'react-navigation'
 import { Constants } from 'expo'
 import {
@@ -12,6 +12,7 @@ import { white, yellow } from './utils/colors'
 import TopBar from './components/TopBar'
 import ScrollTopBar from './components/ScrollTopBar'
 import ScrollCard from './components/ScrollCard'
+import MiddleBar from './components/MiddleBar'
 
 function MyStatusBar({ backgroundColor, ...props }) {
   return (
@@ -84,9 +85,11 @@ export default class App extends React.Component {
       <View style={{ flex: 1 }}>
         <MyStatusBar backgroundColor={white} barStyle="dark-content" />
         <TopBar title="音乐库" />
-        <ScrollTopBar topics={classTopics} category={'西乐'}/>
-        <ScrollTopBar topics={tranTopics} category={'国乐'}/>
-        <ScrollCard />
+        <ScrollTopBar topics={classTopics} category={'西乐'} />
+        <ScrollTopBar topics={tranTopics} category={'国乐'} />
+        <ScrollCard type="commend" num={3} title="今日推荐" />
+        <MiddleBar />
+        <ScrollCard type="hot" num={5} title="热门专辑" />
         <Tabs />
       </View>
     )

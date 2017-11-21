@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Text, View, StyleSheet } from 'react-native'
-import { black } from "../utils/colors"
+import { gray, lineGray } from "../utils/colors"
 
 class TopBar extends Component {
   render() {
@@ -22,7 +22,8 @@ const styles = StyleSheet.create({
     marginBottom: 15
   },
   container: {
-    borderBottomWidth: 0.2
+    borderBottomWidth: StyleSheet.hairlineWidth,
+    borderColor: lineGray
   }
 })
 

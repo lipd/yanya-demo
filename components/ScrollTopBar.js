@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Text, View, ScrollView, StyleSheet } from 'react-native'
-import { black, gray, yellow } from '../utils/colors'
+import { black, gray, yellow, lineGray } from '../utils/colors'
 
 class ScrollTopBar extends Component {
   render() {
@@ -29,7 +29,8 @@ const styles = StyleSheet.create({
     height: 35
   },
   container: {
-    borderBottomWidth: 0.2,
+    borderBottomWidth: StyleSheet.hairlineWidth,
+    borderColor: lineGray,
     paddingLeft: 15,
     paddingRight: 25,
     flexDirection: 'row',

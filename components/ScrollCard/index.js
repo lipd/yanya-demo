@@ -5,10 +5,11 @@ import CardBody from './CardBody'
 
 class ScrollCard extends Component {
   render() {
+    const { type, num, title } = this.props
     return (
       <View>
-        <CardHeader />
-        <CardBody />
+        <CardHeader title={title} num={num}/>
+        <CardBody type={type} />
       </View>
     )
   }
