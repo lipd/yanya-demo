@@ -54,7 +54,7 @@ const Tabs = TabNavigator(
     NewDeckView: {
       screen: View,
       navigationOptions: {
-        tabBarLabel: '小组',
+        tabBarLabel: '圈子',
         tabBarIcon: () => (
           <Entypo name="circular-graph" size={30} color={yellow} />
         )
