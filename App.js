@@ -9,10 +9,7 @@ import {
   Entypo
 } from '@expo/vector-icons'
 import { white, yellow } from './utils/colors'
-import TopBar from './components/TopBar'
-import ScrollTopBar from './components/ScrollTopBar'
-import ScrollCard from './components/ScrollCard'
-import MiddleBar from './components/MiddleBar'
+import MusicLibrary from './views/MusicLibrary'
 
 function MyStatusBar({ backgroundColor, ...props }) {
   return (
@@ -25,7 +22,7 @@ function MyStatusBar({ backgroundColor, ...props }) {
 const Tabs = TabNavigator(
   {
     MusicView: {
-      screen: View,
+      screen: MusicLibrary,
       navigationOptions: {
         tabBarLabel: '音乐库',
         tabBarIcon: () => (
@@ -79,17 +76,9 @@ const Tabs = TabNavigator(
 
 export default class App extends React.Component {
   render() {
-    const classTopics = ['交响乐', '室内乐', '歌剧', '独奏作品', '美声作品']
-    const tranTopics = ['民歌', '戏曲', '说唱', '器乐', '现代国乐']
     return (
       <View style={{ flex: 1 }}>
         <MyStatusBar backgroundColor={white} barStyle="dark-content" />
-        <TopBar title="音乐库" />
-        <ScrollTopBar topics={classTopics} category={'西乐'} />
-        <ScrollTopBar topics={tranTopics} category={'国乐'} />
-        <ScrollCard type="commend" num={3} title="今日推荐" />
-        <MiddleBar />
-        <ScrollCard type="hot" num={5} title="热门专辑" />
         <Tabs />
       </View>
     )
