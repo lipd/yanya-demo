@@ -9,7 +9,6 @@ class List extends Component {
       <View style={styles.container}>
         {items.map((item, index) => {
           const last = index + 1 === items.length
-          console.log(last)
           return (
             <View key={item.title} style={styles.item}>
               {item.icon()}
