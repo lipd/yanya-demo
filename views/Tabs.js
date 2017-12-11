@@ -10,6 +10,7 @@ import { TabNavigator } from 'react-navigation'
 import { Constants } from 'expo'
 import MusicLibrary from './MusicLibrary'
 import Mine from './Mine'
+import MusicInfo from './MusicInfo'
 import { white, yellow } from '../utils/colors'
 
 const Tabs = TabNavigator(
@@ -35,7 +36,7 @@ const Tabs = TabNavigator(
       }
     },
     View: {
-      screen: View,
+      screen: MusicInfo,
       navigationOptions: {
         tabBarLabel: '音乐资讯',
         tabBarIcon: () => <Entypo name="documents" size={30} color={yellow} />
