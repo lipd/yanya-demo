@@ -16,6 +16,7 @@ const mockData = [
     like: 1523,
     comments: 1324,
     share: 1223,
+    photos: ['pw1.jpg', 'pw2.jpg', 'pw3.jpg', 'pw4.jpg']
   },
   {
     id: 2,

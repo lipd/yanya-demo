@@ -5,6 +5,16 @@ import { lineGray, gray, blue, red, white } from '../utils/colors'
 
 const path = 'file:///Users/lipeidao/Projects/yanya-demo/utils/img/'
 
+function PhotoWall({ photos }) {
+  return (
+    <View style={styles.photoContainer}>
+      {photos.map((photo, index) => (
+        <Image style={styles.wallItem} source={{ uri: path + photo }} key={index} />
+      ))}
+    </View>
+  )
+}
+
 function CardHeader({ imgPath, name, time }) {
   return (
     <View style={styles.headerContainer}>
@@ -23,10 +33,11 @@ function CardHeader({ imgPath, name, time }) {
   )
 }
 
-function CardBody({ body }) {
+function CardBody({ body, photos }) {
   return (
     <View style={styles.bodyContainer}>
       <Text style={styles.bodyText}>{body}</Text>
+      {photos && <PhotoWall photos={photos} />}
     </View>
   )
 }
@@ -127,6 +138,18 @@ const styles = StyleSheet.create({
   footerNum: {
     color: gray,
     fontSize: 12,
+  },
+  wallItem: {
+    width: 110,
+    height: 110,
+    marginRight: 5,
+    marginBottom: 5
+  },
+  photoContainer: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    width: 330,
+    marginTop: 10
   },
 })
 
