@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { View, Text, Image, StyleSheet } from 'react-native'
 import { EvilIcons, Ionicons } from '@expo/vector-icons'
-import { lineGray, gray, blue, red } from '../utils/colors'
+import { lineGray, gray, blue, red, white } from '../utils/colors'
 
 const path = 'file:///Users/lipeidao/Projects/yanya-demo/utils/img/'
 
@@ -31,7 +31,7 @@ function CardBody({ body }) {
   )
 }
 
-function CardFooter({like, comments, share}) {
+function CardFooter({ like, comments, share }) {
   return (
     <View style={styles.footerContainer}>
       <View style={styles.footerIconsContainer}>
@@ -71,6 +71,7 @@ const styles = StyleSheet.create({
     borderBottomWidth: StyleSheet.hairlineWidth,
     borderColor: lineGray,
     paddingRight: 10,
+    backgroundColor: white,
   },
   headerContainer: {
     paddingTop: 10,
