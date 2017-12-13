@@ -31,14 +31,14 @@ const Tabs = TabNavigator(
     PostView: {
       screen: View,
       navigationOptions: {
-        tabBarLabel: '文章',
+        tabBarLabel: '专栏',
         tabBarIcon: () => <Ionicons name="md-book" size={30} color={yellow} />
       }
     },
     View: {
       screen: MusicInfo,
       navigationOptions: {
-        tabBarLabel: '音乐资讯',
+        tabBarLabel: '资讯',
         tabBarIcon: () => <Entypo name="documents" size={30} color={yellow} />
       }
     },
@@ -54,7 +54,7 @@ const Tabs = TabNavigator(
     Mine: {
       screen: Mine,
       navigationOptions: {
-        tabBarLabel: '个人主页',
+        tabBarLabel: '个人',
         tabBarIcon: () => (
           <MaterialCommunityIcons name="home-circle" size={30} color={yellow} />
         )
