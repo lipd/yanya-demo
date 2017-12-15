@@ -11,6 +11,7 @@ import { Constants } from 'expo'
 import MusicLibrary from './MusicLibrary'
 import Mine from './Mine'
 import MusicInfo from './MusicInfo'
+import Circle from './Circle'
 import { white, yellow } from '../utils/colors'
 
 const Tabs = TabNavigator(
@@ -43,7 +44,7 @@ const Tabs = TabNavigator(
       }
     },
     NewDeckView: {
-      screen: View,
+      screen: Circle,
       navigationOptions: {
         tabBarLabel: '圈子',
         tabBarIcon: () => (
